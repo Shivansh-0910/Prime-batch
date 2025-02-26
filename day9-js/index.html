@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>YouTube Clone</h1>
+            <form onsubmit="handleSearch(event)">
+                <input type="text" name="search-text" placeholder="Search..." required>
+                <button type="submit">🔍</button>
+            </form>
+        </nav>
+    </header>
+
+    <aside style="padding:2rem;">
+        <nav>
+            <a href="./index.html"> Home</a><br>
+            <a href="./trending.html">Trending</a><br>
+            <a href="./subscriptions.html">Subscriptions</a><br>
+            <a href="./history.html">History</a><br>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="video-grid">
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
