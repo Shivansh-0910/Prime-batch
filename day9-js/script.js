@@ -6206,3 +6206,35 @@ const handleHover = (e, idx) => {
 };
 
 showUI(dummyData);
+
+
+// Function to display videos
+function displayVideos(filteredVideos) {
+    const main = document.querySelector("main");
+    main.innerHTML = ""; // Clear existing videos
+
+    filteredVideos.forEach(video => {
+        const videoCard = document.createElement("div");
+        videoCard.classList.add("video-card");
+
+        videoCard.innerHTML = `
+            <img src="${video.thumbnail}" alt="${video.title}">
+            <h3>${video.title}</h3>
+        `;
+        main.appendChild(videoCard);
+    });
+}
+
+// Initial display of videos
+displayVideos(videos);
+
+// Search function
+function handleSearch() {
+    const searchText = document.getElementById("search-text").value.toLowerCase();
+    
+    // Filter videos based on search text
+    const filteredVideos = videos.filter(video => video.title.toLowerCase().includes(searchText));
+
+    // Display filtered videos
+    displayVideos(filteredVideos);
+}
