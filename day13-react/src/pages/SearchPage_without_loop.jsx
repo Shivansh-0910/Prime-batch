@@ -2,7 +2,7 @@ import "./SearchPage.css"
 
 
 const card=[{
-    title:"invitaion",
+    title:"Invitaion",
     text:"You are invited",
 },
 {
